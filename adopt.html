@@ -1,0 +1,85 @@
+<!-- adopt.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and linking styles  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet - Pets' LoveWorld</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+	
+	<!-- Google Fonts for custom typography -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Logo with a link back to the homepage -->
+        <a href="index.html">
+            <img src="images/petlogo.png" alt="Pets' LoveWorld Logo" class="logo">
+        </a>
+        <h1>Adopt a Pet</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="availablepets.html">Available Pets</a>
+        <a href="adopt.html">Adopt a Pet</a>
+    </nav>
+
+    <main>
+        <!-- Adoption form for interested adopters -->
+        <h2>Pet Adoption Form</h2>
+        <p>Please fill out the form below to begin the adoption process.</p>
+
+        <!-- Form container for styling purposes -->
+        <div class="form-container">
+            <form action="submit_form.php" method="POST">
+                <label for="name">Your Name*</label><br> 
+				<input type="text" id="name" name="name" minlength="3" maxlength="20" required><br>
+				
+				<label for="phone">Your Phone Number*</label><br>
+				<input type="tel" id="phone" name="phone" pattern="\d{10}" maxlength="10" required title="Phone number must be exactly 10 digits"><br>
+
+                <label for="email">Your Email*</label><br>
+                <input type="email" id="email" name="email" required><br>
+				<div>
+				<label for="validateEmail">Validate E-mail*</label><br>
+				  <input type="email" id="validateEmail" name="validateEmail" required><br>
+				</div>
+				              
+				<label>How would you like us to contact you?</label><br>
+					<input type="radio" name="email" value="E-mail"><span>E-mail</span> 
+					<input type="radio" name="phone" value="phone"><span>Phone</span><br> 
+										
+				<label for="pet">Choose a Pet:</label><br>
+                <select id="pet" name="pet">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="rabbit">Micky</option>
+					<option value="parrot">Parrot</option>
+                </select><br>
+                <label for="message">Do you want to leave us any additional comments?</label><br>
+                <textarea id="message" name="message" rows="5"></textarea><br>
+				
+				<div class="options">
+				  <label>
+					<input type="checkbox"> I agree with your T&C
+				  </label><br>
+				  <label>
+					<input type="checkbox"> I want to subscribe to your monthly newsletter
+				  </label>
+				</div>
+                <button type="submit"><img src="images/fluffy.jpg" alt="Small fluffy white dog" height="15" width="15">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>All rights reserved &copy;XMLVC</p>
+    </footer>
+</body>
+</html>
